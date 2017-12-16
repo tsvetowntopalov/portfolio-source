@@ -1,0 +1,27 @@
+.resume {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+  li {
+    margin: 0;
+    img {
+      width: 100%;
+      box-shadow: 0 40px 40px rgba($dark-color, 0.08);
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+      image-rendering:   -o-crisp-edges;         /* Opera */
+      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+      border: 1px solid rgba(38,50,56,.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    &:last-child {
+      img {
+        margin-top: -1px;
+        border-top: 0;
+      }
+    }
+  }
+}

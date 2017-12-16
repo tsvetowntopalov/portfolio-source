@@ -1,0 +1,48 @@
+@import "../variables";
+
+body {
+  padding: 6rem 1rem 3rem;
+  letter-spacing: 0.015rem;
+  overflow-y: scroll!important;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", $base-font-family;
+  small {
+    font-size: .5em;
+    display: block;
+    opacity: .95;
+  }
+}
+
+.badge.btn:after {
+  font-size: .6em;
+  line-height: .7rem;
+}
+
+kbd {
+  a,
+  a:hover {
+    color: #ffffff;
+  }
+}
+
+.empty {
+  background-color: rgba($bg-color, .25);
+}
+
+::selection {
+  color: #ffffff;
+  background: rgba($primary-color,.8); /* WebKit/Blink Browsers */
+}
+
+.form-switch .form-icon:before {
+  background: hsl(0, 0%, 97%);
+}

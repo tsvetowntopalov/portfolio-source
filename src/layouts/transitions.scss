@@ -1,0 +1,28 @@
+.bounce-enter-active {
+  animation: bounce-in 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.bounce-leave-active {
+  animation: bounce-out .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translate3d(0, -2rem, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 4rem, 0);
+    opacity: 0;
+  }
+}

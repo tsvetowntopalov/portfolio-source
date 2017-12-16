@@ -1,0 +1,52 @@
+@import "../variables";
+.map-wrapper {
+  position: relative;
+  margin: -0.5rem -2rem 1rem;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+    padding: 0 2rem;
+    transition-delay: 0.2s;
+    transition: all 0.8s cubic-bezier(.55, 0, .1, 1);
+    .address {
+      position: relative;
+      width: 50%;
+      min-width: 250px;
+      left: -1rem;
+      background-color: #fff;
+      padding: 0 1rem 1rem;
+      border-radius: 0 0 2px 2px;
+      transition: all 0.3s cubic-bezier(.55, 0, .1, 1);
+    }
+  }
+  .map {
+    height: 25rem;
+    flex: 100% 1 1;
+  }
+  .vue-google-map {
+    filter: blur(3px);
+    transform: scale(1.065);
+    transition-delay: 0.2s;
+    transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+  }
+  &.revealed {
+    .overlay {
+      background: rgba(0,0,0,0);
+      pointer-events: none;
+      .address {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+      }
+    }
+    .vue-google-map {
+      filter: blur(0);
+      transform: scale(1);
+    }
+  }
+}

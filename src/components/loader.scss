@@ -1,0 +1,22 @@
+.loader {
+  position: fixed;
+  top: -6rem;
+  left: -2rem;
+  padding: 0 2rem;
+  box-sizing: content-box;
+  height: .25rem;
+  width: 0;
+  transition: width .15s cubic-bezier(.55, 0, .1, 1), opacity .1s cubic-bezier(.55, 0, .1, 1);
+  opacity: 1;
+  background-color: $primary-color;
+  z-index: 900;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    border-color: $primary-color transparent transparent transparent;
+    border-style: solid;
+    border-width: 30px 45px 0 0;
+  }
+}

@@ -1,0 +1,81 @@
+$tablet: "only screen and (max-width : 800px)";
+
+@media screen and (max-width: $size-md) {
+  .navbar {
+    margin-top: 0;
+    .navbar-center {
+      margin: 0 auto;
+      .logo {
+        & > span {
+          & > span {
+            display: none;
+          }
+        }
+        &:hover {
+          & > span {
+            & > span {
+              display: none;
+              &.sec {
+                display: block;
+              }
+            }
+          }
+        }
+        .logo-wrapper {
+          display: none;
+        }
+        .menu-wrapper {
+          display: block;
+        }
+      }
+    }
+    .navbar-section {
+      opacity: 0;
+      top: 160px;
+      z-index: -1;
+
+      flex: none;
+      display: block;
+      position: relative;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.01);
+      //box-shadow: 0 20px 20px rgba(152, 83, 255, 0.25);
+
+      transition: opacity 0.15s ease, transform 0.3s ease;
+      a {
+        display: block;
+        width: 120px;
+        background: #FFF;
+        margin: 0 auto -1px!important;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+      }
+      &:last-child {
+        margin-top: -30px;
+      }
+    }
+    &.open {
+      .navbar-section {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0);
+        z-index: 999;
+      }
+    }
+  }
+
+  #portfolio {
+    .columns {
+      .column {
+        order: 2;
+        &.aside {
+          padding: 0 1rem;
+          order: 1;
+          .sidebar {
+            background: #fcfcfc;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

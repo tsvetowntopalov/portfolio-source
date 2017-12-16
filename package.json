@@ -1,0 +1,39 @@
+{
+  "name": "topalov.me",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "author": "Tsvetan Topalov",
+  "private": true,
+  "scripts": {
+    "spa": "nuxt --spa",
+    "dev": "cross-env HOST=0.0.0.0 PORT=8080 nuxt",
+    "build": "nuxt build",
+    "start": "cross-env PORT=3500 nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "mixitup": "^3.2.1",
+    "nuxt": "^1.0.0-rc11",
+    "sine-waves": "^0.3.0",
+    "spectre.css": "^0.4.4",
+    "vue-awesome-swiper": "^2.6.7",
+    "vue-multiselect": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  }
+}
